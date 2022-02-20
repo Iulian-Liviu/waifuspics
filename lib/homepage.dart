@@ -20,7 +20,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<WaifuView> cardDeckG = <WaifuView>[];
-  late FirebaseFirestore firestore;
+  //late FirebaseFirestore firestore;
   bool isLoading = false;
   @override
   void initState() {
@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
     _loadAsync();
   }
   _loadAsync() async {
-    firestore= FirebaseFirestore.instance;
+    //firestore= FirebaseFirestore.instance;
     setState(() {
       isLoading = true;
     });
@@ -94,14 +94,14 @@ class _HomePageState extends State<HomePage> {
   }
 
   onSwipeRight(WaifuView w, List<WaifuView> lw, int swipeCount) {
-    _SaveData();
+    //_saveData();
     if (swipeCount == cardDeckG.length) {
         _loadAsync();
     }
   }
 
   onSwipeLeft(WaifuView w, List<WaifuView> lw, int swipeCount) {
-  _SaveData();
+  //_saveData();
     if (swipeCount == cardDeckG.length) {
       _loadAsync();
     }
@@ -110,7 +110,8 @@ class _HomePageState extends State<HomePage> {
   deckCardEmpty() {
     _loadAsync();
   }
-  _SaveData(){
+  // TODO : ADD Firebase support
+  _saveData(){
     CollectionReference urls = firestore.collection('Urls');
     if (kDebugMode) {
       print(urls.id);
