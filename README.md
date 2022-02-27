@@ -1,6 +1,11 @@
 # waifuspics
 
-A simple app.
+A simple app made with Flutter.
+
+This app is a tinder app like style but with waifus.
+
+Need Contributors! 
+Don't be shy make a pull request.
 
 ## Getting Started
 
